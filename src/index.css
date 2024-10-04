@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Fredoka";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/fredoka-v14-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* fredoka-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Fredoka";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./assets/fonts/fredoka-v14-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* fredoka-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Fredoka";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/fredoka-v14-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+:root {
+  --dc: white;
+}
+
+html[data-theme="dark"] {
+  --dc: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+}
+#root {
+  border: none;
+  background-color: white;
+  height: 100%;
+}
+body {
+  font-weight: 500;
+  font-family: "Fredoka";
+}
+.layout-cont {
+  transition: 0.3s;
+  height: 727px;
+}
+.def-btn {
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: 1.6px solid oklch(var(--bc));
+  transition: 0.3s;
+  &:hover {
+    transform: translateY(10px);
+  }
+}
+.nav-btn {
+  position: relative;
+  z-index: 10;
+  margin-top: 20px;
+  background: oklch(var(--b1));
+  border-radius: 10px;
+  padding: 12px 14px;
+  /* box-shadow: 0px 8px 14px 0px #3e6be01f; */
+  border: 1.6px solid oklch(var(--bc));
+
+  transition: 0.3s;
+  &:hover {
+    transform: translateY(10px);
+    padding: 22px 24px;
+  }
+}
+.navbar {
+  transition: 0.3s;
+  width: 1267px;
+  padding: 20px;
+}
+.border-def {
+  border-radius: 8px;
+  border: 1.6px solid oklch(var(--bc));
+}
+.nav-btn svg path {
+  fill: oklch(var(--bc));
+}
+.sign-cont input {
+  width: 400px;
+  transition: 0.3s;
+  outline: none;
+  &:hover {
+    padding-left: 25%;
+  }
+}
+.card-home {
+  width: 200px;
+  height: 200px;
+  background: white;
+  transition: 0.3s;
+  &:hover {
+    height: 210px;
+    box-shadow: 0px 8px 14px 0px #3e6be01f;
+  }
+}
+.tasks {
+  padding-right: 50px;
+}
+.info-form ::placeholder {
+  color: black;
+}
+@media screen and (max-width: 1500px) {
+  .navbar {
+    width: 1170px;
+  }
+}
+.hello {
+  animation: hello 0.5s alternate;
+}
+@keyframes hello {
+  25% {
+    margin-top: 30px;
+  }
+  50% {
+    margin-top: 0px;
+  }
+  75% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
